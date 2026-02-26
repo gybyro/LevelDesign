@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Player1
+  - Player2
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Tiles - Background
+    uniqueID: 1709385223
+    locked: 0
+  - name: Doors
+    uniqueID: 3859640127
+    locked: 0
+  - name: Tiles - Ground
+    uniqueID: 1360618493
+    locked: 0
+  - name: Level Objects
+    uniqueID: 3927708649
+    locked: 0
+  - name: Player
+    uniqueID: 262587625
+    locked: 0
+  - name: Tiles - Foreground
+    uniqueID: 1452566527
+    locked: 0
+  m_RenderingLayers:
+  - Default
