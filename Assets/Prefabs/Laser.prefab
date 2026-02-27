@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7339071351365019517}
   - component: {fileID: 3466770712999617975}
   m_Layer: 0
-  m_Name: Lazer
+  m_Name: Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,7 +95,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -6942802426038358599, guid: 5fe6b2f0b5a53418fb3996bb64f4139f,
+  m_Sprite: {fileID: 1697518429315407033, guid: 8770954f53e203a4c9ca1f81d24ff7d9,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -140,15 +140,15 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0002143383, y: 0.00037240982}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.98, y: 0.54}
+    oldSize: {x: 1, y: 0.5}
     newSize: {x: 0.637, y: 0.351}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 0.2}
+  m_Size: {x: 1, y: 0.125}
   m_EdgeRadius: 0
