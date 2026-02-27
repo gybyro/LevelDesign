@@ -157,13 +157,5 @@ namespace AGDDPlatformer
         {
             this.jumpBoost = jumpBoost;
         }
-
-
-        protected void OnTriggerEnter2D(Collider2D collision)
-        {
-            isGrounded = true;
-             // jumping animation
-            animator.SetBool("isJumping", !isGrounded);
-        }
     }
 }
