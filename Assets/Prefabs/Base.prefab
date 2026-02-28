@@ -724,6 +724,7 @@ GameObject:
   - component: {fileID: 4691332086602504074}
   - component: {fileID: 4691332086602504073}
   - component: {fileID: 4691332086602504075}
+  - component: {fileID: 8611801426616873628}
   m_Layer: 0
   m_Name: CM vcam
   m_TagString: Untagged
@@ -803,6 +804,18 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 4691332085472185387}
   m_ConfineScreenEdges: 1
   m_Damping: 0
+--- !u!114 &8611801426616873628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4691332086602504072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a8a05de0ac134f4f9d01bef6b9da077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Cinemachine::Cinemachine.CinemachinePixelPerfect
 --- !u!1 &4691332086608218232
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,6 +828,7 @@ GameObject:
   - component: {fileID: 4691332086608218235}
   - component: {fileID: 4691332086608218233}
   - component: {fileID: 4691332086608218234}
+  - component: {fileID: 878539588969875840}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -930,6 +944,26 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &878539588969875840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4691332086608218232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.PixelPerfect::UnityEngine.U2D.PixelPerfectCamera
+  m_AssetsPPU: 64
+  m_RefResolutionX: 320
+  m_RefResolutionY: 180
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1 &4691332086616792638
 GameObject:
   m_ObjectHideFlags: 0
@@ -1601,12 +1635,12 @@ PrefabInstance:
     - target: {fileID: 486197376359691107, guid: b238e594f938cc640a8c0695257f5a67,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 486197376359691107, guid: b238e594f938cc640a8c0695257f5a67,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 486197376359691107, guid: b238e594f938cc640a8c0695257f5a67,
         type: 3}
@@ -1701,7 +1735,7 @@ PrefabInstance:
     - target: {fileID: 4843451707163031748, guid: b238e594f938cc640a8c0695257f5a67,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 5614520533760180823, guid: b238e594f938cc640a8c0695257f5a67,
         type: 3}
@@ -1890,12 +1924,12 @@ PrefabInstance:
     - target: {fileID: 486197376359691107, guid: b238e594f938cc640a8c0695257f5a67,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 486197376359691107, guid: b238e594f938cc640a8c0695257f5a67,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 486197376359691107, guid: b238e594f938cc640a8c0695257f5a67,
         type: 3}
@@ -1975,7 +2009,7 @@ PrefabInstance:
     - target: {fileID: 4843451707163031748, guid: b238e594f938cc640a8c0695257f5a67,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 5614520533760180823, guid: b238e594f938cc640a8c0695257f5a67,
         type: 3}
