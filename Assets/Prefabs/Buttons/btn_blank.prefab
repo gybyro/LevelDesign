@@ -142,7 +142,8 @@ MonoBehaviour:
   pressedSprite: {fileID: 21300000, guid: 54f01ab73fb21424cbc931cb405b8d7a, type: 3}
   activationMode: 2
   reversesGravity: 0
-  targetObject: {fileID: 0}
+  isSwitch: 0
+  targetObjects: []
 --- !u!61 &8637007022430383096
 BoxCollider2D:
   m_ObjectHideFlags: 0
