@@ -78,11 +78,11 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -367258647
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 3c1533f217fb58a42810ae4f91f2bd90, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 35db1c56f6fac274aa165ba023c55f34, type: 3}
+  m_Color: {r: 0.2981131, g: 0.2981131, b: 0.2981131, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -142,7 +142,8 @@ MonoBehaviour:
   pressedSprite: {fileID: 21300000, guid: 54f01ab73fb21424cbc931cb405b8d7a, type: 3}
   activationMode: 2
   reversesGravity: 0
-  targetObject: {fileID: 0}
+  isSwitch: 0
+  targetObjects: []
 --- !u!61 &8637007022430383096
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -235,7 +236,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -367258647
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 25
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 30c86c8e205a2554aa66d0ab69745495, type: 3}
