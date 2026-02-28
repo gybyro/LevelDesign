@@ -53,6 +53,9 @@ TagManager:
   - name: Tiles - Ground
     uniqueID: 1360618493
     locked: 0
+  - name: danger tiles
+    uniqueID: 2617177973
+    locked: 0
   - name: Level Objects
     uniqueID: 3927708649
     locked: 0

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: anim_tile_bluelaser_down_shutdown
+  m_EditorClassIdentifier: Unity.2D.Tilemap.Extras::UnityEngine.Tilemaps.AnimatedTile
+  m_AnimatedSprites:
+  - {fileID: -2117091384, guid: 29bb5c5beaba1c2409d5c112c39f063d, type: 3}
+  - {fileID: -140631874, guid: 29bb5c5beaba1c2409d5c112c39f063d, type: 3}
+  - {fileID: 462316755, guid: 29bb5c5beaba1c2409d5c112c39f063d, type: 3}
+  - {fileID: 1709191591, guid: 29bb5c5beaba1c2409d5c112c39f063d, type: 3}
+  - {fileID: 295557608, guid: 29bb5c5beaba1c2409d5c112c39f063d, type: 3}
+  - {fileID: -792594500, guid: 29bb5c5beaba1c2409d5c112c39f063d, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_MinSpeed: 8
+  m_MaxSpeed: 8
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 1
+  m_TileAnimationFlags: 1
