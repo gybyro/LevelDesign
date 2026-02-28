@@ -34,6 +34,9 @@ namespace AGDDPlatformer
         // public Animator animator;
         // Animator animator;
         // bool isCapsuleGrounded = false;
+
+        // Horizontal
+        // Input.GetAxisRaw("Horizontal");
         
 
         void Awake()
