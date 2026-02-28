@@ -6,10 +6,12 @@ public class LazerController : MonoBehaviour
     private bool isActive = true;
     
     private SpriteRenderer spriteRenderer;
+    private BoxCollider2D boxCollider;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
     
     public void OnButtonPressed()
@@ -27,6 +29,8 @@ public class LazerController : MonoBehaviour
         isActive = true;
         if (spriteRenderer != null)
             spriteRenderer.enabled = true;
+        if (boxCollider != null)
+            boxCollider.enabled = true;
     }
 
     private void Deactivate()
@@ -34,6 +38,8 @@ public class LazerController : MonoBehaviour
         isActive = false;
         if (spriteRenderer != null)
             spriteRenderer.enabled = false;
+        if (boxCollider != null)
+            boxCollider.enabled = false;
     }
 
     // --- Player Collision ---
