@@ -1,13 +1,23 @@
 using UnityEngine;
 using AGDDPlatformer;
 
-public class DangerTilesSwitch : MonoBehaviour
+public class SwitchController : MonoBehaviour
 {
-    public GameObject tilesheet;
+    [SerializeField] private GameObject[] targetObjects;
 
     [Header("Sprites")]
     [SerializeField] private Sprite unpressedSprite;
     [SerializeField] private Sprite pressedSprite;
+    [SerializeField] private SpriteRenderer extra;
+    [SerializeField] private Sprite extra1; // same as default
+    [SerializeField] private Sprite extra2;
+
+    [SerializeField] private ButtonType aType;
+    public enum ButtonType
+    {
+        DoorTrigger,
+        DisableTrigger
+    }
 
     [SerializeField] private Animator instructionsAnimator;
     [SerializeField] private bool doInstructions = false;
@@ -24,7 +34,7 @@ public class DangerTilesSwitch : MonoBehaviour
 
     private void Start()
     {
-        SetSprite(unpressedSprite);
+        SetSprite(unpressedSprite, extra1);
     }
 
     private void Update()
@@ -42,24 +52,61 @@ public class DangerTilesSwitch : MonoBehaviour
         }
     }
 
-    private void SetSprite(Sprite sprite)
+    private void SetSprite(Sprite sprite, Sprite extraSprite)
     {
         spriteRenderer.sprite = sprite;
+        extra.sprite = extraSprite;
     }
 
     public void SwitchState()
     {
+        
         if (!isActive)
         {
             isActive = !isActive;
-            SetSprite(pressedSprite);
-            tilesheet.SetActive(false);
+            SetSprite(pressedSprite, extra2);
+            if (aType == ButtonType.DisableTrigger) DisableObjects();
+            else if (aType == ButtonType.DoorTrigger) NotifyTarget("OnButtonPressed");
         }
         else if (isActive)
         {
             isActive = !isActive;
-            SetSprite(unpressedSprite);
-            tilesheet.SetActive(true);
+            SetSprite(unpressedSprite, extra1);
+            if (aType == ButtonType.DisableTrigger) EnableObjects();
+            else if (aType == ButtonType.DoorTrigger) NotifyTarget("OnButtonReleased");
+        }
+ 
+    }
+
+    private void DisableObjects()
+    {
+        if (targetObjects == null) return;
+
+        foreach (var target in targetObjects)
+        {
+            if (target != null)
+                target.SetActive(false);
+        }
+    }
+    private void EnableObjects()
+    {
+        if (targetObjects == null) return;
+
+        foreach (var target in targetObjects)
+        {
+            if (target != null)
+                target.SetActive(true);
+        }
+    }
+
+    private void NotifyTarget(string methodName)
+    {
+        if (targetObjects == null) return;
+
+        foreach (var target in targetObjects)
+        {
+            if (target != null)
+                target.SendMessage(methodName, SendMessageOptions.DontRequireReceiver);
         }
     }
 
@@ -89,5 +136,12 @@ public class DangerTilesSwitch : MonoBehaviour
     private bool IsPlayer(Collider2D col)
     {
         return col.CompareTag("Player1") || col.CompareTag("Player2");
+    }
+
+
+    public void ResetState()
+    {
+        isActive = true;
+        SwitchState();
     }
 }

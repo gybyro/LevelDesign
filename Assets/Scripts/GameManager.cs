@@ -19,6 +19,8 @@ namespace AGDDPlatformer
         public string firstLevel;
         public string nextLevel;
 
+        [SerializeField] private SwitchController[] levelsLevers;
+
         [Header("Level Transition")]
         public GameObject startScreen;
         public GameObject endScreen;
@@ -162,6 +164,12 @@ namespace AGDDPlatformer
             foreach (PlayerController player in players)
             {
                 player.ResetPlayer();
+            }
+
+            foreach (var lever in levelsLevers)
+            {
+                if (lever != null)
+                    lever.ResetState();
             }
         }
     }

@@ -17,6 +17,7 @@ public class ButtonController : MonoBehaviour
 
     [Tooltip("If true, the button acts as a toggle switch: entering activates it, entering again deactivates it.")]
     [SerializeField] private bool isSwitch = false;
+    [SerializeField] private bool isDisabling = false;
 
     [Header("Targets")]
     [Tooltip("The GameObjects to notify when this button is pressed/released (e.g. doors, sawblades, spawners, lazers).")]
@@ -168,6 +169,7 @@ public class ButtonController : MonoBehaviour
         {
             if (target != null)
                 target.SendMessage(methodName, SendMessageOptions.DontRequireReceiver);
+                if (isDisabling) target.SetActive(!isActivated);
         }
     }
 
