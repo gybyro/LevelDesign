@@ -229,6 +229,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2149958584660291745, guid: 22311031ebc267842b40bc06654db9f4,
         type: 3}
+      propertyPath: doInstructions
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149958584660291745, guid: 22311031ebc267842b40bc06654db9f4,
+        type: 3}
+      propertyPath: instructionsAnimator
+      value: 
+      objectReference: {fileID: 964341844}
+    - target: {fileID: 2149958584660291745, guid: 22311031ebc267842b40bc06654db9f4,
+        type: 3}
       propertyPath: targetObjects.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -81529,6 +81539,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d096467bd11505479937aff780e5cd2, type: 3}
+--- !u!95 &964341844 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4882213201752864899, guid: 1d096467bd11505479937aff780e5cd2,
+    type: 3}
+  m_PrefabInstance: {fileID: 964341843}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &965453537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -84066,7 +84082,7 @@ Tilemap:
       - {fileID: 2879056636016235227, guid: 29bb5c5beaba1c2409d5c112c39f063d, type: 3}
       - {fileID: 367897833518182590, guid: 29bb5c5beaba1c2409d5c112c39f063d, type: 3}
       - {fileID: 7882079340234788267, guid: 29bb5c5beaba1c2409d5c112c39f063d, type: 3}
-      m_AnimationSpeed: 12
+      m_AnimationSpeed: 12.000001
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 33, y: 2, z: 0}

@@ -12,8 +12,8 @@ public class SwitchController : MonoBehaviour
     [SerializeField] private Sprite extra1; // same as default
     [SerializeField] private Sprite extra2;
 
-    [SerializeField] private ButtonType aType;
-    public enum ButtonType
+    [SerializeField] private SwitchType aType;
+    public enum SwitchType
     {
         DoorTrigger,
         DisableTrigger
@@ -65,15 +65,15 @@ public class SwitchController : MonoBehaviour
         {
             isActive = !isActive;
             SetSprite(pressedSprite, extra2);
-            if (aType == ButtonType.DisableTrigger) DisableObjects();
-            else if (aType == ButtonType.DoorTrigger) NotifyTarget("OnButtonPressed");
+            if (aType == SwitchType.DisableTrigger) DisableObjects();
+            else if (aType == SwitchType.DoorTrigger) NotifyTarget("OnButtonPressed");
         }
         else if (isActive)
         {
             isActive = !isActive;
             SetSprite(unpressedSprite, extra1);
-            if (aType == ButtonType.DisableTrigger) EnableObjects();
-            else if (aType == ButtonType.DoorTrigger) NotifyTarget("OnButtonReleased");
+            if (aType == SwitchType.DisableTrigger) EnableObjects();
+            else if (aType == SwitchType.DoorTrigger) NotifyTarget("OnButtonReleased");
         }
  
     }
@@ -142,6 +142,8 @@ public class SwitchController : MonoBehaviour
     public void ResetState()
     {
         isActive = true;
-        SwitchState();
+
+        if (aType == SwitchType.DisableTrigger) SwitchState();
+        else if (aType == SwitchType.DoorTrigger) NotifyTarget("OnButtonReleased");
     }
 }

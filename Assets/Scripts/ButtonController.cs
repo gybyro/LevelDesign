@@ -147,7 +147,11 @@ public class ButtonController : MonoBehaviour
         if (isActivated || !IsActivationConditionMet()) return;
 
         isActivated = true;
-        NotifyTarget("OnButtonPressed");
+        if (isDisabling) {
+            DisableTargets();
+        } else {
+            NotifyTarget("OnButtonPressed");
+        }
 
         if (reversesGravity)
             ReverseGravity();
@@ -160,8 +164,7 @@ public class ButtonController : MonoBehaviour
         if (isDisabling)
         {
             if (disableRoutine != null) StopCoroutine(disableRoutine);
-
-            disableRoutine = StartCoroutine(DelayedDeactivate());
+            disableRoutine = StartCoroutine(DelayedEnable());
         } else 
         {
             DeactivateNow();
@@ -175,14 +178,34 @@ public class ButtonController : MonoBehaviour
 
 
 
-    private IEnumerator DelayedDeactivate()
+    private IEnumerator DelayedEnable()
     {
         yield return new WaitForSeconds(0.2f);
 
-        // Check again in case player stepped back on
-        if (!IsActivationConditionMet() && isActivated)
+        if (!IsActivationConditionMet())
         {
-            DeactivateNow();
+            isActivated = false;
+            EnableTargets();
+        }
+    }
+    private void DisableTargets()
+    {
+        if (targetObjects == null) return;
+
+        foreach (var target in targetObjects)
+        {
+            if (target != null)
+                target.SetActive(false);
+        }
+    }
+    private void EnableTargets()
+    {
+        if (targetObjects == null) return;
+
+        foreach (var target in targetObjects)
+        {
+            if (target != null)
+                target.SetActive(true);
         }
     }
 

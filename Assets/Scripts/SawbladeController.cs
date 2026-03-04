@@ -48,7 +48,7 @@ public class SawbladeController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!isActive) return;
+        // if (!isActive) return;
         if (!IsPlayer(collision.collider)) return;
 
         KillPlayer();
@@ -56,7 +56,7 @@ public class SawbladeController : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (!isActive) return;
+        // if (!isActive) return;
         if (!IsPlayer(collision.collider)) return;
 
         KillPlayer();

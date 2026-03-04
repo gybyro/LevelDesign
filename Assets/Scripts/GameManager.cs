@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -35,6 +36,8 @@ namespace AGDDPlatformer
         [Header("Audio")]
         public AudioSource source;
         public AudioClip winSound;
+
+        public bool isGravityFlipped = false;
 
         void Awake()
         {
@@ -138,6 +141,7 @@ namespace AGDDPlatformer
             }
 
             FlipPlayerSprites();
+            isGravityFlipped = !isGravityFlipped;
         }
 
         private void FlipPlayerSprites()
@@ -170,6 +174,11 @@ namespace AGDDPlatformer
             {
                 if (lever != null)
                     lever.ResetState();
+            }
+
+            if (isGravityFlipped)
+            {
+                ReverseAllGravity();
             }
         }
     }
