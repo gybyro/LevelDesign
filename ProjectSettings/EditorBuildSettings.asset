@@ -41,5 +41,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level5_tiled.unity
     guid: c1a3f6cda5fb2684dab89ab4d0264ad7
+  - enabled: 1
+    path: Assets/Scenes/castle.unity
+    guid: d25063173acf42445a7b54d71f2777f0
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
