@@ -118,14 +118,20 @@ namespace AGDDPlatformer
 
             /* --- Adjust Sprite --- */
 
-            // Assume the sprite is facing right, flip it if moving left
-            if (move.x > 0.01f)
+            // Use raw input (not physics-adjusted move.x) for sprite direction.
+            // When the transform is rotated 180° (inverted-gravity player),
+            // the rotation already mirrors the sprite horizontally, so we
+            // need to invert the flipX logic to compensate.
+            float rawInput = Input.GetAxisRaw("Horizontal");
+            bool invertFlip = transform.right.x < 0;
+
+            if (rawInput > 0.01f)
             {
-                spriteRenderer.flipX = false;
+                spriteRenderer.flipX = invertFlip;
             }
-            else if (move.x < -0.01f)
+            else if (rawInput < -0.01f)
             {
-                spriteRenderer.flipX = true;
+                spriteRenderer.flipX = !invertFlip;
             }
 
 
