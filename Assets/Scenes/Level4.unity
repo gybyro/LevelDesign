@@ -28488,7 +28488,7 @@ PrefabInstance:
     - target: {fileID: 4691332085822845703, guid: 1d096467bd11505479937aff780e5cd2,
         type: 3}
       propertyPath: nextLevel
-      value: Level1
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 4691332085822845703, guid: 1d096467bd11505479937aff780e5cd2,
         type: 3}
@@ -28662,6 +28662,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5162713269032941276, guid: 1d096467bd11505479937aff780e5cd2,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162713269032941276, guid: 1d096467bd11505479937aff780e5cd2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162713269032941276, guid: 1d096467bd11505479937aff780e5cd2,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.85
       objectReference: {fileID: 0}
@@ -28669,6 +28679,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 10.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886308783601118933, guid: 1d096467bd11505479937aff780e5cd2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886308783601118933, guid: 1d096467bd11505479937aff780e5cd2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7886308783601118933, guid: 1d096467bd11505479937aff780e5cd2,
         type: 3}
@@ -31192,7 +31212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4765671664299627036}
   m_Layer: 0
-  m_Name: Level-3
+  m_Name: Level-4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
