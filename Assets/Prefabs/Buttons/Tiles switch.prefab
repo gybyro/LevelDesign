@@ -47,13 +47,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0a0ece61741c5a4187f97d91998c676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DangerTilesSwitch
-  tilesheet: {fileID: 0}
+  targetObjects: []
   unpressedSprite: {fileID: 21300000, guid: cf7f8d435370d1945b3fe37ab135d5a3, type: 3}
   pressedSprite: {fileID: 21300000, guid: 475a5938810486d42a911cffdcffae34, type: 3}
   extra: {fileID: 4016261447467946184}
   extra1: {fileID: 21300000, guid: 0c85cea404b513840a4293c1c9c0bff7, type: 3}
   extra2: {fileID: 21300000, guid: 225a76ea9f0f16f4e935454cfa8df2d2, type: 3}
-  aType: 3
+  aType: 0
   instructionsAnimator: {fileID: 0}
   doInstructions: 0
 --- !u!212 &2438783946607311462
