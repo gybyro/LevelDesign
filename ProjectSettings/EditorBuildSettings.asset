@@ -38,5 +38,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level4_tiled.unity
     guid: d5079a9eb584994439ebe883b4dd6928
+  - enabled: 1
+    path: Assets/Scenes/Level5_tiled.unity
+    guid: c1a3f6cda5fb2684dab89ab4d0264ad7
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
