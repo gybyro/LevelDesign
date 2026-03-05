@@ -357,6 +357,7 @@ MonoBehaviour:
   isGameComplete: 0
   firstLevel: Level1
   nextLevel: 
+  levelsLevers: []
   startScreen: {fileID: 4691332086022123576}
   endScreen: {fileID: 4691332086754536652}
   gameOverScreen: {fileID: 4691332085947852944}
@@ -366,6 +367,7 @@ MonoBehaviour:
   deathCount: 0
   source: {fileID: 7761618367455619781}
   winSound: {fileID: 8300000, guid: 35d12cf4c2549ad4184f05633ab2d29f, type: 3}
+  isGravityFlipped: 0
 --- !u!82 &7761618367455619781
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1072,10 +1074,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.2D.PixelPerfect::UnityEngine.U2D.PixelPerfectCamera
   m_AssetsPPU: 64
-  m_RefResolutionX: 320
-  m_RefResolutionY: 180
+  m_RefResolutionX: 1280
+  m_RefResolutionY: 960
   m_UpscaleRT: 0
-  m_PixelSnapping: 0
+  m_PixelSnapping: 1
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
@@ -1770,10 +1772,10 @@ RectTransform:
   - {fileID: 4573503911178063725}
   m_Father: {fileID: 4691332085998625987}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -694, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -556, y: -37}
+  m_SizeDelta: {x: 1713.0967, y: 1048.0796}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &4882213201752864899
 Animator:
