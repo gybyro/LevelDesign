@@ -142,8 +142,6 @@ public class SwitchController : MonoBehaviour
     public void ResetState()
     {
         isActive = true;
-
-        if (aType == SwitchType.DisableTrigger) SwitchState();
-        else if (aType == SwitchType.DoorTrigger) NotifyTarget("OnButtonReleased");
+        SwitchState();
     }
 }
