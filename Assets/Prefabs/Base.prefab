@@ -2288,6 +2288,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5700472183686776624, guid: b238e594f938cc640a8c0695257f5a67,
         type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 51b912c0d544e4a4d8b13c4d6fe3ef3d, type: 3}
+    - target: {fileID: 5700472183686776624, guid: b238e594f938cc640a8c0695257f5a67,
+        type: 3}
       propertyPath: gravityModifier
       value: -1
       objectReference: {fileID: 0}
@@ -2555,6 +2560,11 @@ PrefabInstance:
       propertyPath: isPlayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5700472183686776624, guid: b238e594f938cc640a8c0695257f5a67,
+        type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 51b912c0d544e4a4d8b13c4d6fe3ef3d, type: 3}
     - target: {fileID: 6775851020127425952, guid: b238e594f938cc640a8c0695257f5a67,
         type: 3}
       propertyPath: m_Size.x

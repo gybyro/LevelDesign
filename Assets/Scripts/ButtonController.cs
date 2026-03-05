@@ -102,7 +102,8 @@ public class ButtonController : MonoBehaviour
         {
             isActivated = false;
             SetSprite(unpressedSprite);
-            NotifyTarget("OnButtonReleased");
+            StartCoroutine(DelayedNotify("OnButtonReleased"));
+            
         }
         else
         {
@@ -173,7 +174,7 @@ public class ButtonController : MonoBehaviour
     private void DeactivateNow()
     {
         isActivated = false;
-        NotifyTarget("OnButtonReleased");
+        StartCoroutine(DelayedNotify("OnButtonReleased"));
     }
 
 
@@ -210,6 +211,15 @@ public class ButtonController : MonoBehaviour
     }
 
     // --- Target Notification ---
+    private IEnumerator DelayedNotify(string methodName)
+    {
+        yield return new WaitForSeconds(0.2f);
+
+        if (!IsActivationConditionMet())
+        {
+            NotifyTarget(methodName);
+        }
+    }
 
     private void NotifyTarget(string methodName)
     {
